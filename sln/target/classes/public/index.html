@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Index</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="South African Tax Calculator">
+  <meta name="keywords" content="SARS tax">
+
+  <title>Tax Calculator</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
-Server started
-</body>
+<div class="container">
+  <h2>Tax Calculator</h2>
+  <form method="post" action="/calculate-tax">
+      <div class="row input-group mb-3">
+          <label class="col-md-4 col-form-label" for="age">Age</label>
+          <input type="number" class="col-md-4 form-control" id="age" placeholder="16">
+      </div>
 
+      <div class="row input-group mb-3">
+          <label class="col-md-4 col-form-label" for="taxYear">Tax Year</label>
+          <select name="Year" id="taxYear" class="col-md-4 form-control">
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+          </select>
+      </div>
+
+      <div class="row input-group mb-3">
+          <label class="col-md-4 col-form-label" for="earnings">Total Taxable Earnings</label>
+          <div class="input-group-prepend">
+              <span class="input-group-text">R</span>
+          </div>
+          <input type="number" class="col-md-4 form-control" id="earnings" placeholder="16">
+      </div>
+
+      <div class="row input-group mb-3">
+          <label class="col-md-4 col-form-label" for="payFreq">Earnings Frequency</label>
+          <select name="Year" id="payFreq" class="col-md-4 form-control">
+              <option value="0">Monthly</option>
+              <option value="1">Annually</option>
+          </select>
+      </div>
+
+      <div class="row input-group mb-3">
+          <label class="col-md-4 col-form-label" for="medicalAid">No. of Beneficiaries (incl. Main Member)</label>
+          <input type="number" class="col-md-4 form-control" id="medicalAid" placeholder="0">
+      </div>
+
+    <button>Submit</button>
+  </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
 </html>
